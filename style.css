@@ -1,0 +1,182 @@
+@font-face {
+  font-family: texto;
+  src: url("/images/news-homepage-main/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+* {
+  /**resetear estilos predeterminados que nos afecta*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /** hace que no se salga un contenedor de su padre*/
+}
+html,
+body {
+  /**siempre decirle que tome el 100%  de la pantalla*/
+  min-height: 100%;
+  font-family: texto;
+}
+/*header*/
+header {
+  /**darle espacio al header*/
+  padding: 30px 15px 0 15px; /**le estamos dando espacio a la parte izquierda del logo y la parte de arriba*/
+}
+
+.logo {
+  width: 4rem;
+}
+.logo img {
+  /** darle tamaño a la imagen*/
+  height: 100%; /**alto de imagen*/
+  width: 100%;
+}
+.menu {
+  display: none;
+}/**trabajar pixeles en los contenedores padres de las imagenesy no directamente en la imágen, uno no pone tamaños absolutos si queremos que sea responsive*/
+
+/*Main*/
+main {
+  display: flex; /*vamos a trabajar con flex box */
+  justify-content: center; /*siempre se usan para display flex*/
+  align-items: center; /* siempre se usa para display flex */
+  flex-direction: column;
+  padding: 1rem;
+}
+/*Section 1*/
+.section1 {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center; /*siempre se usan para display flex*/
+  align-items: center; /* siempre se usa para display flex */
+  flex-direction: column; /*ubica la informacion una sobre otra */
+}
+.imageSection1 {
+  width: 100%;
+}
+.imageSection1 img {
+  width: 100%;
+}
+.section1 button {
+  border: none;
+  background-color: salmon;
+  color: white;
+  padding: 10px 25px;
+}
+.section1 h1{
+  padding-top: 10px ;
+  padding-bottom: 10px;
+}
+.section1 p{
+  padding-bottom: 10px;
+  color:gray;
+}
+
+/*sectioin2*/
+.section2 {
+  background-color: rgb(10, 2, 26);
+  color: white;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.section2 h1 {
+  color: rgb(255, 223, 80);
+  margin-bottom: 2rem;
+}
+.section2 h3{
+  padding-bottom: 10px;
+}
+hr {
+  margin: 1rem 0;
+}
+/*Section3*/
+.section3 {
+  margin-top: 1rem;
+}
+.section3 h1, .section3 p{
+  color: gray;
+}
+.content-3 {
+  display: flex;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+.imgContent {
+  height: 100%;
+  padding: 0.5rem;
+}
+.imgContent img {
+  height: 100%;
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/* DESKTOP */
+@media (min-width:680px){
+  main{
+    display: flex;
+    padding: o 5rem;
+    margin-top: 2rem;
+  }
+
+  body {
+    background-color: rgb(245, 226, 192);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+  .menu ul {
+    display: flex;
+    list-style: none;
+  }
+  .menu li {
+    margin-left: 1rem;
+  }
+  /*Section 1 Desktop*/
+  .section1Destopk {
+    background-color: aqua;
+    display: flex;
+  }
+
+  .section1{
+    padding: 0 ;
+    margin-right: 1rem;
+    
+  }
+  .textSection1 h1 {
+    font-size: 3vw;
+  }
+
+  .section1Destopk .section1 {
+    width: 70%;
+  }
+
+  .section1Destopk .section2 {
+    width: 30%;
+  }
+
+  /* section 2 */
+
+  .section2 {
+    margin: 0;
+  }
+
+  /* Section 3 */
+
+  .section3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .content-3 {
+    width: 30%;
+  }
+
+}
